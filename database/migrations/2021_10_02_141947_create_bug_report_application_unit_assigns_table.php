@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateBugReportApplicationUnitAssignsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('bug_report_application_unit_assigns', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->softDeletes();
+            $table->string('unit_assign')->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('bug_report_application_unit_assigns');
+    }
+}
