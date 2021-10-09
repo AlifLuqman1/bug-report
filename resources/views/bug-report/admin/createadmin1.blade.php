@@ -63,7 +63,7 @@
                                 <br>
                                 <div class="form-group mb-1">
                                     <label for="admin2_comment">Comment from Admin 2 </label>
-                                    <textarea class="form-control" id="admin2_comment"
+                                    <textarea class="form-control" readonly id="admin2_comment"
                                         rows="7">{{ $bugReportApplication->admin2_comment }}</textarea>
                                 </div>
                                 {{-- @endforeach --}}

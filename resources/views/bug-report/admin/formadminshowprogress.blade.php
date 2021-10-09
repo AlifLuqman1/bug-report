@@ -114,7 +114,7 @@
 
                         <div class="form-group mb-1">
                             <label for="problem">Problem / Comment : </label>
-                            <textarea class="form-control" id="user_comment"
+                            <textarea class="form-control" readonly id="user_comment"
                                 rows="4">{{ $bugReportApplication->user_comment }}</textarea>
                         </div>
                         <br>
@@ -163,21 +163,21 @@
 
                         <div class="form-group">
                             <label for="department_comment">Comment from Admin1 :</label>
-                            <textarea class="form-control" id="admin1_comment"
+                            <textarea class="form-control" readonly id="admin1_comment"
                                 rows="7">{{ $bugReportApplication->admin1_comment }}</textarea>
                                 <small>Submitted on {{$bugReportApplication->admin1_commented_at}}</small>
                         </div>
 
                         <div class="form-group mb-1">
                             <label for="section_comment">Comment from Admin2 :</label>
-                            <textarea class="form-control" id="admin2_comment"
+                            <textarea class="form-control" readonly id="admin2_comment"
                                 rows="7">{{ $bugReportApplication->admin2_comment }}</textarea>
                                 <small>Submitted on {{$bugReportApplication->admin2_commented_at}}</small>
                         </div>
 
                         <div class="form-group mb-1">
                             <label for="unit_comment">Comment from Unit :</label>
-                            <textarea class="form-control" id="unit_comment"
+                            <textarea class="form-control" readonly id="unit_comment"
                                 rows="7">{{ $bugReportApplication->unit_comment }}</textarea>
                         </div>
                     </div>

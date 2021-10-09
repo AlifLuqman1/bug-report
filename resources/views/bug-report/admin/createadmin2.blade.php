@@ -64,13 +64,13 @@
 
                                 <div class="form-group mb-1">
                                     <label for="admin1_comment">Comment from Admin 1 </label>
-                                    <textarea class="form-control" id="admin1_comment"
+                                    <textarea class="form-control" readonly id="admin1_comment"
                                         rows="7">{{ $bugReportApplication->admin1_comment }}</textarea>
                                 </div>
 
                                 <div class="form-group mb-1">
                                     <label for="unit_comment">Comment from Unit </label>
-                                    <textarea class="form-control" id="unit_comment"
+                                    <textarea class="form-control" readonly id="unit_comment"
                                         rows="7">{{ $bugReportApplication->unit_comment }}</textarea>
                                 </div>
                             </div>
@@ -116,7 +116,7 @@
 
                                 <div class="form-group mb-1">
                                     <label for="admin1_comment">Comment from Admin 1 </label>
-                                    <textarea class="form-control" id="admin1_comment"
+                                    <textarea class="form-control" readonly id="admin1_comment"
                                         rows="7">{{ $bugReportApplication->admin1_comment }}</textarea>
                                 </div>
                             </div>

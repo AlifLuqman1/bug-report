@@ -138,8 +138,18 @@ class UserCreateReporttController extends Controller
      */
     public function show($id)
     {
-        $data = BugReportApplication::find($id);
-        return view('bug-report.user.show')->with('data', $data);
+        // $data = BugReportApplication::find($id);
+        // return view('bug-report.user.show')->with('data', $data);
+
+        $bugReportApplication = BugReportApplication::with(['bugReportApplicationCategory', 'bugReportApplicationSubSection', 'bugReportApplicationSection', 'bugReportApplicationUnitAssign', 'bugReportApplicationStatus'])->findOrFail($id);
+
+        $parameters = $this->lookup();
+
+        return view('bug-report.user.showuploadedattachment')->with([
+            'bugReportApplication' => $bugReportApplication,
+            'parameters' => $this->lookup(),
+            'formMode' => null
+        ]);
     }
 
     /**
